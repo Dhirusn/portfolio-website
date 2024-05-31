@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="filters portfolio-filter">
+    <ul>
+      <li (click)="filterItems('*')" [class.active]="selectedFilter === '*'">
+        all
+      </li>
+      <li
+        (click)="filterItems('popular')"
+        [class.active]="selectedFilter === 'popular'"
+      >
+        popular
+      </li>
+      <li
+        (click)="filterItems('latest')"
+        [class.active]="selectedFilter === 'latest'"
+      >
+        latest
+      </li>
+      <li
+        (click)="filterItems('following')"
+        [class.active]="selectedFilter === 'following'"
+      >
+        following
+      </li>
+      <li
+        (click)="filterItems('upcoming')"
+        [class.active]="selectedFilter === 'upcoming'"
+      >
+        upcoming
+      </li>
+    </ul>
+  </div>
+
+  <div class="filters-content">
+    <div class="row portfolio-grid justify-content-center">
+      <div
+        class="col-lg-4 col-md-6 all"
+        *ngFor="let item of portfolioItems"
+        [ngClass]="item.category"
+      >
+        <div class="portfolio_box">
+          <a [routerLink]="item.detailLink">
+            <div class="single_portfolio">
+              <img
+                class="img-fluid w-100"
+                [src]="item.imgSrc"
+                alt="{{ item.title }}"
+              />
+              <div class="overlay"></div>
+              <a [routerLink]="item.detailLink" class="img-gal">
+                <div class="icon">
+                  <span class="lnr lnr-cross"></span>
+                </div>
+              </a>
+            </div>
+          </a>
+          <div class="short_info">
+            <h4>
+              <a [routerLink]="item.detailLink">{{ item.title }}</a>
+            </h4>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
