@@ -9,11 +9,11 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class TestimonialComponent {
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 700,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    navSpeed: 100,
     navText: ['', ''],
     responsive: {
       0: {
@@ -29,6 +29,6 @@ export class TestimonialComponent {
         items: 1
       }
     },
-    nav: true
+    nav: false
   }
 }
