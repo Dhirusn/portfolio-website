@@ -1,4 +1,3 @@
-```markdown
 # My Portfolio Website
 
 Welcome to the repository for my personal portfolio website! This site showcases my skills, projects, and experience. It was built using the [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1, a powerful command-line interface for Angular development.
@@ -145,7 +144,6 @@ Feel free to reach out to me through the following channels:
 * **[Add any other relevant contact methods, e.g., Twitter, GitHub]**
 
 Thank you for visiting my portfolio!
-```
 
 **Key improvements and additions:**
 
